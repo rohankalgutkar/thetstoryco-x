@@ -529,7 +529,7 @@ textarea.form-control {
 }
 
 .ftco-38 .ftco-38-header .ftco-38-heading {
-  font-size: 30px;
+  font-size: 27px;
   color: #000;
   margin: 0;
   font-weight: 300;
@@ -538,7 +538,7 @@ textarea.form-control {
 
 @media (max-width: 991.98px) {
   .ftco-38 .ftco-38-header .ftco-38-heading {
-    font-size: 24px;
+    font-size: 21px;
   }
 }
 
@@ -547,11 +547,12 @@ textarea.form-control {
   margin: 0 0 20px 0;
   letter-spacing: .1em;
   text-transform: uppercase;
+  font-size: 18px;
 }
 
 @media (max-width: 991.98px) {
   .ftco-38 .ftco-38-header .ftco-38-subheading {
-    font-size: 18px;
+    font-size: 15px;
   }
 }
 
@@ -559,6 +560,9 @@ textarea.form-control {
   width: 200px;
   border-radius: 50%;
   margin-bottom: 40px;
+}
+.ftco-38 .ftco-38-body{
+  font-size: 18px;
 }
 
 .btn-link {
