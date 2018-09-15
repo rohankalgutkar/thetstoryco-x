@@ -1,4 +1,4 @@
-html {
+©html {
   overflow-x: hidden;
 }
 
@@ -543,11 +543,12 @@ textarea.form-control {
 }
 
 .ftco-38 .ftco-38-header .ftco-38-subheading {
-  color: #b3b3b3;
+  color: #ff7a5c;
+  /*  was b3b3b3*/
   margin: 0 0 20px 0;
   letter-spacing: .1em;
   text-transform: uppercase;
-  font-size: 18px;
+  font-size: 16px;
 }
 
 @media (max-width: 991.98px) {
@@ -739,7 +740,7 @@ textarea.form-control {
 }
 
 .testimonial .author p {
-  color: #cccccc;
+  color: #b3b3b3;
   font-size: 14px;
 }
 
