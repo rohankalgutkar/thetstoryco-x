@@ -26,34 +26,52 @@ app.get('/products', (req, res) => res.render('products', {
   pageProduct: true
 }));
 
-// var transporter = nodemailer.createTransport({
-//  service: 'gmail',
-//  auth: {
-//         user: 'thetstoryco@gmail.com',
-//         pass: 'DSRterrariums'
-//     }
-// });
-//
-// app.get('/contact', (req, res) => {
-//   const mailOptions = {
-//   from: 'contact@thetstory.co', // sender address
-//   to: 'rohankalgutkar@gmail.com', // list of receivers
-//   subject: 'Test mail', // Subject line
-//   html: '<p>Your html here</p>'// plain text body
-// };
-//
-//   transporter.sendMail(mailOptions, function (err, info) {
-//    if(err)
-//      console.log(err)
-//    else
-//      console.log(info);
-// });
-// });
-
-app.post('/contact', (req, res) => {
-  console.log(req);
-  res.redirect('/#section-contact');
+var transporter = nodemailer.createTransport({
+  host: 'smtp.mailgun.org',
+  port: 465,
+ secure: true,
+ auth: {
+        user: 'contact@thetstory.co',
+        pass: 'pass_contact_mailgun'
+    }
 });
+
+app.post('/', (req, res) => {
+
+  var message = `<h3>Message from the contact form</h3>
+                <p>
+                  <b>Name</b>: ${req.body.name}
+                  <br>
+                  <b>Email ID</b>: ${req.body.email}
+                  <br>
+                  <b>Phone</b>: ${req.body.phone}
+                  <br>
+                  <b>Message</b>: ${req.body.message}
+                </p>
+                `;
+
+  const mailOptions = {
+  from: 'contact@thetstory.co', // sender address
+  to: 'thetstoryco@gmail.com', // list of receivers
+  subject: 'Contact form message ' + new Date().toDateString() , // Subject line
+  html: message// plain text body
+};
+
+  transporter.sendMail(mailOptions, function (err, info) {
+   if(err)
+     return console.log('There was an error in sending your mail')
+   else{
+     console.log('Message sent: %s', info.messageId);
+     return true
+   }
+  });
+
+res.render('index', {
+  pageHome: true,
+  messageSent: true
+});
+});
+
 
 app.get('/full', (req, res) => res.render('index-full'));
 

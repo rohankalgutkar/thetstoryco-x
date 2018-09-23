@@ -1,36 +1,30 @@
-<div class="section bg-white" data-aos="fade-up" id="section-contact">
+{{#if messageSent}}
+<script type="text/javascript">
+  window.location.href = "#section-contact";
+</script>
+{{/if}}
+
+<div class="section bg-light" data-aos="fade-up" id="section-contact">
   <div class="container">
     <div class="row section-heading justify-content-center mb-5">
       <div class="col-md-8 text-center">
         <h2 class="heading mb-3">Get In Touch</h2>
         <p class="sub-heading mb-5">For any inquiries, support, bulk orders or collaboration, <br> please feel free to contact us.</p>
       </div>
-      {{#if dFlag}}
+      {{#if messageSent}}
       <div class="col-md-6 text-center">
         <div class="alert alert-success alert-dismissible fade show" role="alert">
           <small> <i> Your message has been sent! We'll contact you shortly. </i></small>
           <button type="button" class="close" data-dismiss="alert" aria-label="Close">
-            <span aria-hidden="true">&times;</span>
-          </button>
-        </div>
-      </div>
-      {{/if}}
-      {{#if eFlag}}
-      <div class="col-md-6 text-center">
-        <div class="alert alert-danger alert-dismissible fade show" role="alert">
-          <small> Oops! There was an issue, please try again later.
-            <br>Or contact us using the details at the bottom of the page.
-          </small>
-          <button type="button" class="close" data-dismiss="alert" aria-label="Close">
-            <span aria-hidden="true">&times;</span>
-          </button>
+          <span aria-hidden="true">&times;</span>
+        </button>
         </div>
       </div>
       {{/if}}
     </div>
     <div class="row justify-content-center">
       <div class="col-md-10 p-5 form-wrap">
-        <form action="/contact" method="post">
+        <form action="/" method="post">
           <div class="row mb-4">
             <div class="form-group col-md-4">
               <label for="name" class="label">Name</label>
