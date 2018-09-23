@@ -42,11 +42,17 @@
       <nav class="site-menu" id="ftco-navbar-spy">
         <div class="site-menu-inner" id="ftco-navbar">
           <ul class="list-unstyled">
+            {{#if pageHome}}
             <li><a href="#section-home">Home</a></li>
-            <li><a href="#section-products">Products</a></li>
-            <li><a href="#section-services">Services</a></li>
+            <li><a href="products">Products</a></li>
             <li><a href="#section-about">About</a></li>
-            <li><a href="#section-orders">Orders</a></li>
+            <li><a href="#section-contact">Contact</a></li>
+            {{/if}}
+            {{#if pageProduct}}
+            <li><a href="/">Home</a></li>
+            <li><a href="/">Bespoke</a></li>
+            <li><a href="/">Reccommendations</a></li>
+            {{/if}}
           </ul>
         </div>
       </nav>
