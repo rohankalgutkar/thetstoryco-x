@@ -1293,14 +1293,29 @@ textarea.form-control {
 }
 
 .cover_1 .heading {
+  display: inline-block;
   color: white;
   font-weight: 300;
   font-size: 30px;
   line-height: 1.5;
 }
 
+/*  Typed js custom CSS*/
+.typed-cursor{
+  color: white;
+  font-weight: 300;
+  font-size: 30px;
+  line-height: 1.2;
+}
+
+
 @media (min-width: 768px) {
   .cover_1 .heading {
+    font-size: 70px;
+    font-weight: 900;
+    line-height: 1.2;
+  }
+  .typed-cursor {
     font-size: 70px;
     font-weight: 900;
     line-height: 1.2;
