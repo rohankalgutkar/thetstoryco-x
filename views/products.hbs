@@ -1,7 +1,6 @@
 {{> header}}
 
 <div class="main-wrap " id="section-products">
-
   <div class="section bg-white" id="section-catalog" data-aos="fade-up">
     <div class="container" style="padding-top: 80px">
       <div class="row section-heading justify-content-center mb-5">
@@ -25,66 +24,34 @@
               <a class="nav-link" id="pills-design-tab" data-toggle="pill" href="#pills-design" role="tab" aria-controls="pills-design" aria-selected="false">Design</a>
             </li>
           </ul>
-          <form class="" action="index.html" method="post">
+          <form action="products" method="post">
             <div class="tab-content" id="pills-tabContent">
-
-              <!--  Planter Items-->
-
-              <div class="tab-pane fade show active" id="pills-planter" role="tabpanel" aria-labelledby="pills-planter-tab">
-                <div class="d-block d-md-flex menu-food-item">
-                  <div class="text order-1 mb-3">
-                    <img src="images/img_1.jpg">
-                    <h3><a href="#">Some Planter Option 1</a></h3>
-                    <p>Spinach and artichokes in a creamy cheese dip with warm tortilla chips &amp; salsa.</p>
-                  </div>
-                  <div class="price order-2">
-                    <strong>₹100.49</strong>
-                    <input type="checkbox" name="planter1" value="planterCode1">
-</div>
-                  </div>
-                </div>
-
-                <div class="tab-pane fade" id="pills-plant" role="tabpanel" aria-labelledby="pills-plant-tab">
-                  <div class="d-block d-md-flex menu-food-item">
-                    <div class="text order-1 mb-3">
-                      <img src="images/img_2.jpg">
-                      <h3><a href="#">Plant Option 1</a></h3>
-                      <p>Spinach and artichokes in a creamy cheese dip with warm tortilla chips &amp; salsa.</p>
-                    </div>
-                    <div class="price order-2">
-                      <strong>₹120.49</strong>
-                      <input type="checkbox" name="plant1" value="plantCode1">
-</div>
-                    </div>
-                  </div>
-
-                  <div class="tab-pane fade" id="pills-design" role="tabpanel" aria-labelledby="pills-design-tab">
-                    <div class="d-block d-md-flex menu-food-item">
-                      <div class="text order-1 mb-3">
-                        <img src="images/img_3.jpg">
-                        <h3><a href="#">Design Option 1</a></h3>
-                        <p>Spinach and artichokes in a creamy cheese dip with warm tortilla chips &amp; salsa.</p>
-                      </div>
-                      <div class="price order-2">
-                        <strong>₹180.99</strong>
-                        <input type="checkbox" name="design1" value="design1">
-</div>
-                      </div>
-                    </div>
-
-                      </div>
-                      <div class="justify-content-center">
-                      <div class="offset-md-3 col-md-5">
-                        <input type="submit" class="btn btn-primary btn-outline-primary btn-block" value="Select">
-                      </div>
-                    </div>
+              {{> products/planters}}
+              {{> products/plants}}
+              {{> products/design}}
+            </div>
+            <div class="justify-content-center">
+              <div class="offset-md-3 col-md-6">
+                <input type="submit" class="btn btn-primary btn-outline-primary btn-block" value="Select">
+              </div>
+            </div>
           </form>
         </div>
-
+      </div>
+      <div class="row justify-content-center p-5">
+        <div class="col-md-8">
+          <h3 class="text-center">Price Estimate</h3>
+          <p class="sub-heading mb-5">
+            Planter:
+            <br>
+            Plant:
+            <br>
+            Design:
+          </p>
+        </div>
       </div>
     </div>
   </div>
-
   <div class="section bg-light" data-aos="fade-up" id="section-orders">
     <div class="container">
       <div class="row section-heading justify-content-center mb-5">
@@ -96,5 +63,4 @@
       </div>
     </div>
   </div>
-
   {{> footer}}

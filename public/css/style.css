@@ -1811,3 +1811,8 @@ textarea.form-control {
     stroke-dashoffset: -136px;
   }
 }
+/*  Order Process Custom Styles*/
+.order-process p{
+  font-size: 16px;
+  margin-bottom: 0;
+}

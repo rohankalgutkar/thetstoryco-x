@@ -25,6 +25,10 @@ app.get('/products', (req, res) => res.render('products', {
   title: 'Products',
   pageProduct: true
 }));
+app.get('/catalogue', (req, res) => res.render('catalogue', {
+  title: 'Catalogue',
+  pageProduct: true
+}));
 
 var transporter = nodemailer.createTransport({
   host: 'smtp.mailgun.org',
@@ -70,6 +74,11 @@ res.render('index', {
   pageHome: true,
   messageSent: true
 });
+});
+
+app.post('/products', (req, res) => {
+  console.log(req.body);
+  res.redirect('/products')
 });
 
 
